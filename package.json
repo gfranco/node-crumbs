@@ -1,25 +1,25 @@
 {
-    "name": "crumbs",
-    "version": "0.0.0",
-    "description": "Yarrr!!111",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "mocha": "~1.21.4"
-    },
-    "scripts": {
-        "test": "mocha"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/gfranco/node-crumbs"
-    },
-    "author": "gfranco",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/gfranco/node-crumbs/issues"
-    }
+  "name": "crumbs",
+  "version": "0.0.1",
+  "description": "Yarrr!!111",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.21.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfranco/node-crumbs"
+  },
+  "author": "gfranco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gfranco/node-crumbs/issues"
+  }
 }
