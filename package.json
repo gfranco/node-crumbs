@@ -1,7 +1,7 @@
 {
   "name": "crumbs",
   "version": "0.0.1",
-  "description": "Yarrr!!111",
+  "description": "Get or set nested object property",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,13 +11,14 @@
     "mocha": "~1.21.4"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gfranco/node-crumbs"
   },
-  "author": "gfranco",
+  "author": "Georgiy Mostolovitsa <hello@gfranco.ru> (https://github.com/gfranco/)",
+  "homepage": "https://github.com/gfranco/node-crumbs",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gfranco/node-crumbs/issues"
