@@ -2,30 +2,24 @@
  * Get value from object for provided property
  *
  * @param {Object} object
- * @param {String|Array} property
+ * @param {String} property
  * @param {*} [defaultValue]
  * @returns {*}
  */
 var get = exports.get = function(object, property, defaultValue) {
 
     if(!Array.isArray(property))
-        return get(object, property.split('.'), defaultValue)
+        property = property.split('.')
 
     if(!object) return defaultValue
 
-    var propName = property[0]
-    property = property.slice(1)
-
+    var propName = property.shift()
     if(!property.length)
-        return object.hasOwnProperty(propName)
+        return propName in object
             ? object[propName]
             : defaultValue
 
-    var value = object[propName]
-    if(classOf(value) === 'Object')
-        return get(value, property, defaultValue)
-
-    return defaultValue
+    return get(object[propName], property, defaultValue)
 
 }
 
@@ -33,28 +27,23 @@ var get = exports.get = function(object, property, defaultValue) {
  * Set value for provided property
  *
  * @param {Object} object
- * @param {String|Array} property
+ * @param {String} property
  * @param {*} value
+ * @returns {*}
  */
 var set = exports.set = function(object, property, value) {
 
     if(!Array.isArray(property))
-        return set(object, property.split('.'), value)
+        property = property.split('.')
 
-    var propName = property[0]
-    property = property.slice(1)
-
+    var propName = property.shift()
     if(!property.length)
         return object[propName] = value
 
-    object = object.hasOwnProperty(propName)
+    object = propName in object
         ? object[propName]
         : object[propName] = {}
 
     return set(object, property, value)
 
-}
-
-function classOf(something) {
-    return Object.prototype.toString.call(something).slice(8, -1)
 }
